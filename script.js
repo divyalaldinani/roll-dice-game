@@ -22,9 +22,9 @@ console.log( holdBtn, diceImg, rollDice, newBtn, currScore1, currScore2);
 rollDice.addEventListener('click', function() {
     if( Number(totalScore1.textContent) < 100 && Number(totalScore2.textContent) < 100  ){
         let random = Math.trunc(Math.random() * 6 ) + 1;
-        console.log( random );
+        // console.log( random );
         diceImg.src = 'dice-' + random + '.png';
-        console.log( diceImg.src );
+        // console.log( diceImg.src );
         diceImg.classList.remove('hidden');
         // if( random == 1 ) {
         //     reset();
@@ -97,6 +97,7 @@ newBtn.addEventListener('click', function() {
     currScore2.textContent = '0';
     totalScore1.textContent = '0';
     totalScore2.textContent = '0';
+    diceImg.classList.add('hidden');
     if( player1.classList.contains('inactive') ) {
         player1.classList.add('active');
         player2.classList.add('inactive');
