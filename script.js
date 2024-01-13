@@ -91,4 +91,24 @@ holdBtn.addEventListener('click', function( ) {
         }
         changePlayer();
     }
-})
+});
+newBtn.addEventListener('click', function() {
+    currScore1.textContent = '0';
+    currScore2.textContent = '0';
+    totalScore1.textContent = '0';
+    totalScore2.textContent = '0';
+    if( player1.classList.contains('inactive') ) {
+        player1.classList.add('active');
+        player2.classList.add('inactive');
+        player1.classList.remove('inactive');
+        player2.classList.remove('active');
+    }
+    if( player1.classList.contains('win') ) {
+        player1.classList.remove('win');
+        player2.classList.remove('lost');
+    }
+    else if( player1.classList.contains('lost') ) {
+        player2.classList.remove('win');
+        player1.classList.remove('lost');
+    }
+});
