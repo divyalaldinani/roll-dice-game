@@ -74,7 +74,7 @@ holdBtn.addEventListener('click', function( ) {
             totalScore1.textContent = Number(currScore1.textContent) + Number( totalScore1.textContent );
             if( Number( totalScore1.textContent ) >= 100 ) {
                 player1.classList.add('win');
-                diceImg.add('hidden');
+                diceImg.classList.add('hidden');
                 player2.classList.add('lost');
             }
             currScore1.textContent = '0';
@@ -84,7 +84,7 @@ holdBtn.addEventListener('click', function( ) {
             if( Number( totalScore2.textContent ) >= 100 ) {
                 player2.classList.add('win');
                 player1.classList.add('lost');
-                diceImg.add('hidden');
+                diceImg.classList.add('hidden');
             }
             currScore2.textContent = '0';
             
